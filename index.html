@@ -1,41 +1,319 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
-		<link rel="shortcut icon" href="favicon.png">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+	<link rel="shortcut icon" href="favicon.png">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background-color="rgb(170, 42, 202)" data-auto-animate>
+				<h4 data-id="head">实验一</h4>
+				<p>实验内容</p>
+				<div>
+					<ul>
+						<li>设计一个如下的网页</li>
+					</ul>
+				</div>
+				<img width="50%" src="https://cdn.jsdelivr.net/gh/ClarkKenty/Pic_bed/img/20210610151736.png" />
+				<p>
+					<a href="experiment1.html" target="_blank">Demo</a>
+				</p>
+			</section>
+			<section data-background-color="rgb(1, 185, 93)" data-auto-animate>
+				<section data-auto-animate>
+					<h4 data-id="head">实验二</h4>
+					<p>实验内容</p>
+					<div>
+						<ul>
+							<li>用CSS实现如下类似界面</li>
+							<li>利用浮动、定位实现网页多列布局</li>
+						</ul>
+					</div>
+					<img src="https://cdn.jsdelivr.net/gh/ClarkKenty/Pic_bed/img/20210610153137.png" />
+					<p>
+						<a href="experiment2.html" target="_blank">Demo</a>
+					</p>
+				</section>
+				<section data-auto-animate>
+					<h4 data-id="head">实验二</h4>
+					<p>设计思路</p>
+					<pre><code data-trim data-line-numbers="1-12|10|14-23">
+						//将网页分为 up 和 down 上下两个布局
+						.up{
+							margin-left: 30px;
+							margin-right: 10px;
+							margin-top: 20px;
+							overflow: hidden;
+						}
+						.down {
+							width: 1300px;
+							margin: 0 auto;//将下半部分水平居中
+							line-height: 50px;
+						}
+
+						//使用float将上半部分为左右两列
+						.left_box { 
+							width: 700px;
+							float: left;
+						}
+
+						.right_box {
+							width: 700px;
+							float: right;
+						}
+					</code></pre>
+				</section>
+			</section>
+			<section data-background-color="rgb(70, 70, 255)" data-auto-animate>
+				<section data-auto-animate>
+					<h4 data-id="head">实验三</h4>
+					<p>实验内容</p>
+					<div>
+						<ul>
+							<li>实现鼠标点击不同的按钮，显示不同的图片和文本框</li>
+						</ul>
+					</div>
+					<p>
+						<a href="experiment3.html" target="_blank">Demo</a>
+					</p>
+				</section>
+				<section data-auto-animate>
+					<h4 data-id="head">实验三</h4>
+					<p>设计思路</p>
+					<pre><code data-trim  data-line-numbers="1-6|8-19|21-24|28-30|34-36|40-42|46">
+						//html
+						<div class="allpics">
+							<img id="TOM_PIC1" src="https://z3.ax1x.com/2021/04/27/gphNa6.jpg" >
+							<img id="TOM_PIC2" src="https://z3.ax1x.com/2021/04/27/gphdPO.jpg" >
+							<img id="TOM_PIC3" src="https://z3.ax1x.com/2021/04/27/gphwGD.jpg" >
+						</div>
+
+							//css
+							.allpics{
+								//把父盒子设为relative，子盒子相对于父盒子绝对定位
+								position: relative;
+							}
+
+							#TOM_PIC,#TON_PIC2,#TOM_PIC3{
+								//三张图片完全叠在一起
+								position: absolute;
+								left: 0;
+								top: 0;
+							}
+							
+							#TON_PIC2,#TOM_PIC3{
+								//把后两张图片预设为完全透明,只显示出第一张
+								opacity: 0;
+							}
+							
+							//js
+							button1.onclick = function(){
+								pic1.style.opacity = 1;
+								pic2.style.opacity = 0;
+								pic3.style.opacity = 0;
+								text.value = "This is the first picture";
+							}
+							button2.onclick = function(){
+								pic1.style.opacity = 0;
+								pic2.style.opacity = 1;
+								pic3.style.opacity = 0;
+								text.value = "This is the second picture";
+							}
+							button3.onclick = function(){
+								pic1.style.opacity = 0;
+								pic2.style.opacity = 0;
+								pic3.style.opacity = 1;
+								text.value = "This is the third picture";
+							}
+
+							transition: opacity ease 3s;//透明度过渡效果
+					</code></pre>
+				</section>
+			</section>
+			<section data-background-color="rgb(38, 135, 190)" data-auto-animate>
+				<section data-auto-animate>
+					<h4 data-id="head">实验四</h4>
+					<p>实验内容</p>
+					<div>
+						<ul>
+							<li>设计用户注册页面，综合应用表格、表单等标记。</li>
+							<li>使用js验证表单内容</li>
+						</ul>
+					</div>
+					<p>
+					<p>
+						<a href="experiment4.html" target="_blank">Demo</a>
+					</p>
+				</section>
+				<section data-auto-animate>
+					<h4 data-id="head">实验四</h4>
+					<p>设计思路</p>
+					<pre><code data-trim data-line-numbers="5|10|15|19-29|20-21|31-42|32-33">
+						//在每个输入栏后面加上一个span元素，用于设置警告信息
+						<p>
+							<span>用户名</span>
+							<span><input type="text" id="user_name"></span>
+							<span id = "user_warn">用户名长度6-12</span>
+						</p>
+						<p>
+							<span>密码</span>
+							<span><input type="password" id="password"></span>
+							<span id="password_warn">请输入密码，长度6-12，字母和数字的组合</span>
+						</p>
+						<p>
+							<span>确认密码</span>
+							<span><input type="password" id="password_confirm"></span>
+							<span id="confirm_warn">请确认密码</span>
+						</p>
+
+						//js
+						user_name.onblur = ()=>{//输入框失去焦点时触发事件
+							//使用正则 /^\w{6,12}$/  来匹配6-12个字符
+							if(!/^\w{6,12}$/.test(user_name.value)){
+								user_warn.innerText="格式错误，用户名长度6-12";
+								user_warn.style.color = 'red';
+							}
+							else{
+								user_warn.innerText = '输入正确';
+								user_warn.style.color = "rgb(7, 109, 122)";
+							}
+						}
+
+						password.onblur = ()=>{
+							//使用正则 /^[0-9a-zA-Z]{6,12}$/ 来匹配6-12个字母和数字的组合
+							if(!/^[0-9a-zA-Z]{6,12}$/.test(password.value)){
+								password_warn.innerText="格式错误，密码长度6-12，字母和数字的组合";
+								password_warn.style.color = 'red';
+							}
+							else{
+								password_warn.innerText="输入正确";
+								password_warn.style.color = 'rgb(7, 109, 122)';
+							}
+						}
+					</code></pre>
+				</section>
+			</section>
+			<section data-background-color="rgb(121, 185, 46)" data-auto-animate>
+				<h4 data-id="head">实验五</h4>
+				<p>实验内容</p>
+				<div>
+					<ul>
+						<li>实验内容：使用php判断表单输入合法性</li>
+					</ul>
+				</div>
+				<p>
+
+				<p>
+					<a href="https://darkcraft.top/webCourse/experiment5.php" target="_blank">Demo</a>
+				</p>
+			</section>
+			<section data-background-color="rgb(190, 124, 38)" data-auto-animate>
+				<h4 data-id="head">实验六</h4>
+				<p>实验内容</p>
+				<div>
+					<ul>
+						<li>实验内容：使用php判断表单输入合法性。</li>
+						<li>创建MYSQL数据库，创建表。</li>
+						<li>表单信息与数据库中存储信息进行比对，进行表单验证。</li>
+						<li>通过验证，进入新的page。</li>
+					</ul>
+				</div>
+				<p>
+				<p>
+					<a href="https://darkcraft.top/webCourse" target="_blank">Demo</a>
+				</p>
+			</section>
+
+
+
+			<!-- <section data-auto-animate="running" style="top: 214.5px; display: block;" class="present">
+				<h2 data-auto-animate-target="58">Auto-Animate</h2>
+				<p data-auto-animate-target="unmatched">Automatically animate matching elements across slides with <a
+						href="https://revealjs.com/auto-animate/">Auto-Animate</a>.</p>
+				<div class="r-hstack justify-center">
+					<div data-id="box1"
+						style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"
+						data-auto-animate-target="55"></div>
+					<div data-id="box2"
+						style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"
+						data-auto-animate-target="56"></div>
+					<div data-id="box3"
+						style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"
+						data-auto-animate-target="57"></div>
+					<div data-id="box4"
+						style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"
+						data-auto-animate-target="57"></div>
+				</div>
+			</section>
+			<section data-auto-animate="running" style="top: 235.5px; display: block;" class="present">
+				<div class="r-hstack justify-center">
+					<div data-id="box1" data-auto-animate-delay="0"
+						style="background: cyan; width: 150px; height: 100px; margin: 10px;"
+						data-auto-animate-target="43"></div>
+					<div data-id="box2" data-auto-animate-delay="0.1"
+						style="background: magenta; width: 150px; height: 100px; margin: 10px;"
+						data-auto-animate-target="44"></div>
+					<div data-id="box3" data-auto-animate-delay="0.2"
+						style="background: yellow; width: 150px; height: 100px; margin: 10px;"
+						data-auto-animate-target="45"></div>
+					<div data-id="box4" data-auto-animate-delay="0.3"
+						style="background: green; width: 150px; height: 100px; margin: 10px;"
+						data-auto-animate-target="45"></div>
+				</div>
+				<h2 style="margin-top: 20px;">Auto-Animate</h2>
+			</section>
+			<section data-auto-animate="running" style="top: 145.5px; display: block;" class="present" data-index-h="9">
+				<div class="r-stack">
+					<div data-id="box1" style="background: cyan; width: 300px; height: 300px; border-radius: 200px;"
+						data-auto-animate-target="63"></div>
+					<div data-id="box2" style="background: magenta; width: 200px; height: 200px; border-radius: 200px;"
+						data-auto-animate-target="64"></div>
+					<div data-id="box3" style="background: yellow; width: 100px; height: 100px; border-radius: 200px;"
+						data-auto-animate-target="64"></div>
+					<div data-id="box4" style="background: green; width: 50px; height: 50px; border-radius: 200px;"
+						data-auto-animate-target="64"></div>
+				</div>
+				<h2 style="margin-top: 20px;" data-auto-animate-target="66">Auto-Animate</h2>
+			</section>
+			<section>
+				<div class="r-stack">
+					<img class="fragment" src="https://placekitten.com/450/300" width="450" height="300">
+					<img class="fragment" src="https://placekitten.com/300/450" width="300" height="450">
+					<img class="fragment" src="https://placekitten.com/400/400" width="400" height="400">
+				</div>
+			</section> -->
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			width: 960,
+			height: 1000,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
 </html>
