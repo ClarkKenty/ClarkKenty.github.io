@@ -27,7 +27,8 @@
 						<li>设计一个如下的网页</li>
 					</ul>
 				</div>
-				<img width="30%" style="opacity: 0.7;" src="https://cdn.jsdelivr.net/gh/ClarkKenty/Pic_bed/img/20210610151736.png" />
+				<img width="30%" style="opacity: 0.7;"
+					src="https://cdn.jsdelivr.net/gh/ClarkKenty/Pic_bed/img/20210610151736.png" />
 				<p>
 					<a href="experiment1.html" target="_blank">Demo</a>
 				</p>
@@ -42,7 +43,8 @@
 							<li>利用浮动、定位实现网页多列布局</li>
 						</ul>
 					</div>
-					<img src="https://cdn.jsdelivr.net/gh/ClarkKenty/Pic_bed/img/20210610153137.png" />
+					<img style="opacity: 0.7;"
+						src="https://cdn.jsdelivr.net/gh/ClarkKenty/Pic_bed/img/20210610153137.png" />
 					<p>
 						<a href="experiment2.html" target="_blank">Demo</a>
 					</p>
@@ -187,7 +189,7 @@
 				<section data-auto-animate>
 					<h4 data-id="head">实验四</h4>
 					<p>设计思路</p>
-					<pre><code data-trim data-line-numbers="5|10|15|19-29|20-21|31-42|32-33">
+					<pre><code data-trim data-line-numbers="1|5|10|15|19-29|20-21|31-42|32-33">
 						//在每个输入栏后面加上一个span元素，用于设置警告信息
 						<p>
 							<span>用户名</span>
@@ -372,12 +374,30 @@
 							<li>通过验证，进入新的page</li>
 						</ul>
 					</div>
-					<p>
+
+					<div data-id="box1" data-auto-animate-delay="0.3"
+						style="position: absolute;left: 0; background: rgb(184, 167, 14);border-radius: 30%; width: 50px; height: 30px; margin: 10px;"
+						data-auto-animate-target="43"></div>
+					<div data-id="box4" data-auto-animate-delay="0.3"
+						style="position: absolute;right: 0; background: rgb(184, 167, 14);border-radius: 30%;  width: 50px; height: 30px; margin: 10px;"
+						data-auto-animate-target="45"></div>
 					<p>
 						<a href="https://darkcraft.top/webCourse" target="_blank">Demo</a>
 					</p>
 				</section>
 			</section>
+			
+			<section data-auto-animate="running" data-background-color="rgb(14, 184, 99)"  style="top: 235.5px; display: block;" class="present">
+				<div class="r-hstack justify-center">
+					<div data-id="box1" data-auto-animate-delay="0.3"
+						style="line-height: 100px; border-radius: 50%; background: cyan; width: 150px; height: 100px; margin: 10px;"
+						data-auto-animate-target="43">THE</div>
+					<div data-id="box4" data-auto-animate-delay="0.3"
+						style="line-height: 100px; border-radius: 50%;background: green; width: 150px; height: 100px; margin: 10px;"
+						data-auto-animate-target="45">END</div>
+				</div>
+			</section>
+			
 
 
 
