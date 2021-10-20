@@ -5,10 +5,10 @@
 
 body {
     background-image: url('https://z3.ax1x.com/2021/10/09/5F8pa8.png');
-    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=113889),auto;
+    cursor: url(https://cdn.jsdelivr.net/gh/ClarkKenty/CDN@2.0/pics/featherpenpointer.cur), auto;
 }
 
-.el-header{
+.el-header {
     padding-top: 20px;
     font-weight: bold;
 }
@@ -27,16 +27,19 @@ body {
     justify-content: center;
     color: rgb(7, 136, 250);
 }
-.el-header ul li{
+
+.el-header ul li {
     /* cursor: url(http://www.rw-designer.com/cursor-extern.php?id=22923),auto; */
-    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=23451),auto;
+    cursor: url(https://cdn.jsdelivr.net/gh/ClarkKenty/CDN@2.0/pics/HANDS%20CURSOR%203.cur), auto;
     user-select: none;
 }
-.el-header ul li{
+
+.el-header ul li {
     color: rgb(7, 136, 250);
 }
 
-.el-menu-item,.el-submenu__title{
+.el-menu-item,
+.el-submenu__title {
     font-size: 17px;
     color: wheat;
 }
@@ -66,7 +69,7 @@ body>.el-container {
     line-height: 320px;
 }
 
-.compass{
+.compass {
     width: 60px;
     height: 60px;
     position: absolute;
@@ -74,9 +77,56 @@ body>.el-container {
     top: 80%;
 }
 
-.compass img{
+.compass img {
     transition: transform ease .3s;
     width: 100%;
     height: 100%;
     transform: rotate(45deg);
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: transparant;
+    overflow: hidden;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li {
+    margin-right: 80px;
+    float: left;
+    font-size: 16px;
+    list-style: none;
+    line-height: 50px;
+    /* cursor: url(http://www.rw-designer.com/cursor-extern.php?id=22923),auto; */
+    cursor: url(https://cdn.jsdelivr.net/gh/ClarkKenty/CDN@2.0/pics/HANDS%20CURSOR%203.cur), auto;
+    user-select: none;
+}
+
+
+.navbar li a{
+    text-decoration: none;
+    /* cursor: url(http://www.rw-designer.com/cursor-extern.php?id=22923),auto; */
+    cursor: url(https://cdn.jsdelivr.net/gh/ClarkKenty/CDN@2.0/pics/HANDS%20CURSOR%203.cur), auto;
+    user-select: none;
+    color: #333;
+}
+
+iframe{
+    user-select: none;
+
+}
+
+.nav_inside {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+
+
 }

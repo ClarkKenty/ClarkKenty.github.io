@@ -3,6 +3,8 @@
     
 }
 
+
+
 .text--line {
     font-size: 7rem;
     font-family: satisfy, sans-serif;
@@ -103,16 +105,22 @@
     top: 19.7498vw;
 }
 .my{
-    
     position: absolute;
-    left: 55.9579vw;
-    top: 23.0415vw;
+    left: 65.9579vw;
+    top: 25.0415vw;
 }
 .space{
     position: absolute;
-    left: 69.12vw;
-    top: 29.625vw;
+    left: 76.12vw;
+    top: 32.625vw;
 }
+
+#Tom_frame{
+  position: absolute;
+    left: 13.16vw;
+    top: 25.625vw;
+}
+
 
 *{
     overflow: visible;

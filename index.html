@@ -25,13 +25,16 @@
         <el-container>
             <el-header>
                 <div class="line"></div>
-                <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect"
-                    background-color="transparent" text-color="#000000" active-text-color="rgb(95, 158, 160)">
-                    <el-menu-item index="1"></el-menu-item>
-                    <el-menu-item index="2"></el-menu-item>
-                    <el-menu-item index="3"></el-menu-item>
-                    <el-menu-item index="4"></el-menu-item>
-                </el-menu>
+                <div class="navbar">
+                    <div class="nav_inside">
+                        <ul>
+                            <li><a href="#">文章</a></li>
+                            <li><a href="#">分类</a></li>
+                            <li><a href="#">归档</a></li>
+                            <li><a href="#">音乐盒</a></li>
+                        </ul>
+                    </div>
+                </div>
 
             </el-header>
             <el-main>
@@ -143,10 +146,13 @@
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                 style="--length:71.9139px" class="QYbbQpfC_1"></path>
                         </svg>
+                        <iframe width="500px" height="300px" id="Tom_frame" src="tom.svg" frameborder="0"></iframe>
+
                     </div>
                     <div id="compass" class="compass">
                         <img id="compass_img" src="https://z3.ax1x.com/2021/10/09/5k0mM8.png" alt="">
                     </div>
+
 
             </el-main>
             <el-footer></el-footer>
@@ -161,21 +167,35 @@
     //         return { visible: false }
     //     }
     // })
-    let time =0;
+    let time = 0;
     var wrapper = document.querySelectorAll('.header .fonts')
     var btnDraw = document.querySelector('.btn-draw')
     var btnErase = document.querySelector('.btn-erase')
+    var Tom_frame = document.querySelector('#Tom_frame');
+    
+    Tom_frame.onload = ()=>{
+        var d = Tom_frame.getSVGDocument()
+
+        var svg = d.querySelector('svg')
+
+        svg.classList.add('active');
+    }
 
     // We are only adding and removing the 'active' class,
     // the entire animation is defined in the CSS code
     function draw() {
-        for (let i =0;i<wrapper.length;i++) {
+        for (let i = 0; i < wrapper.length; i++) {
             setTimeout(() => {
                 wrapper[i].classList.add('active')
-            }, 700*time++);
+            }, 700 * time++);
 
 
         }
+   
+
+        
+
+
     }
 
     function erase() {
