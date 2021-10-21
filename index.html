@@ -146,7 +146,7 @@
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                 style="--length:71.9139px" class="QYbbQpfC_1"></path>
                         </svg>
-                        <iframe width="500px" height="300px" id="Tom_frame" src="tom.svg" frameborder="0"></iframe>
+                        <iframe width="500px" height="300px" id="Tom_frame" src="Tom.svg" frameborder="0"></iframe>
 
                     </div>
                     <div id="compass" class="compass">
@@ -172,11 +172,10 @@
     var btnDraw = document.querySelector('.btn-draw')
     var btnErase = document.querySelector('.btn-erase')
     var Tom_frame = document.querySelector('#Tom_frame');
-    
-    Tom_frame.onload = ()=>{
-        var d = Tom_frame.getSVGDocument()
 
-        var svg = d.querySelector('svg')
+    Tom_frame.onload = () => {
+        var d = Tom_frame.contentWindow;
+        var svg = d.document.querySelector('svg')
 
         svg.classList.add('active');
     }
@@ -191,9 +190,7 @@
 
 
         }
-   
 
-        
 
 
     }
